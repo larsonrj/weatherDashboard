@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: blueviolet;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
