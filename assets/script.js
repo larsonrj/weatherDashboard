@@ -45,6 +45,7 @@ searchBtnEl.click(function () {
         return response.json();
       })
       .then(function (data) {
+        
         var coordinates = {
             lat: data.city.coord.lat,
             lon: data.city.coord.lon
@@ -58,12 +59,16 @@ searchBtnEl.click(function () {
 function fiveDay(coordinates) {
     var lat = coordinates.lat;
     var lon = coordinates.lon;
-    fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + apiKey;
+    fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + apiKey + "&cnt=5";
     
     fetch(fiveDayURL)
     .then(function (response) {
         return response.json();
       })
       .then(function (dayData) {
-        console.log(dayData)})
-      }
+        console.log(dayData)
+        $(".today li:nth-child(1)").text()
+        var weekCast = $(".week")
+    }
+    )
+}
